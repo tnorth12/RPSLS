@@ -6,6 +6,7 @@ from Trainer import Trainer
 class Human(Trainer):
     def __init__(self):
         super().__init__("Player")
+        
         pass
 
     def choose_starter(self):
