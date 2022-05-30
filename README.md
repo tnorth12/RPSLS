@@ -1,3 +1,3 @@
 # RPSLS
 
-#Game of RPSLS for your enjoyment 
+Game of RPSLS for your enjoyment 
