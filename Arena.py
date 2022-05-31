@@ -7,6 +7,8 @@ class Arena:
     def __init__(self):
         self.human = Human()
         self.ai = AI()
+        self.AI_wins = 0
+        self.player_wins = 0
         pass
 
     def run_battle (self):
@@ -15,76 +17,84 @@ class Arena:
         self.winner_rpsls()
         self.series_winner()
         
-        pass
-
+                
     def players_choose_starters(self):
         self.human.choose_starter()
         self.ai.choose_starter()
 
-    def winner_rpsls(self):
+    def winner_rpsls(self):             
         if self.human.selected_starter == "Scissors" and self.ai.selected_starter == "Paper":
-            player_wins = player_wins + 1
+            self.player_wins = self.player_wins + 1
             print("Player is the winner!")
         elif self.ai.selected_starter == "Scissors" and self.human.selected_starter == "Paper":
-            AI_wins = AI_wins + 1
+            self.AI_wins = self.AI_wins + 1
             print("AI is the winner!")
         elif self.human.selected_starter == "Paper" and self.ai.selected_starter == "Rock":
-            player_wins = player_wins + 1
+            self.player_wins = self.player_wins + 1
             print("Player is the winner!")
         elif self.ai.selected_starter == "Paper" and self.human.selected_starter == "Rock":
-            AI_wins = AI_wins + 1
+            self.AI_wins = self.AI_wins + 1
             print("AI is the winner!")
         elif self.human.selected_starter == "Rock" and self.ai.selected_starter == "Lizard":
-            player_wins = player_wins + 1
+            self.player_wins = self.player_wins + 1
             print("Player is the winner!")
         elif self.ai.selected_starter == "Rock" and self.human.selected_starter == "Lizard":
-            AI_wins = AI_wins + 1
+            self.AI_wins = self.AI_wins + 1
             print("AI is the winner!")
         elif self.human.selected_starter == "Lizard" and self.ai.selected_starter == "Spock":
-            player_wins = player_wins + 1
+            self.player_wins = self.player_wins + 1
             print("Player is the winner!")
         elif self.ai.selected_starter == "Lizard" and self.human.selected_starter == "Spock":
-            AI_wins = AI_wins + 1
+            self.AI_wins = self.AI_wins + 1
             print("AI is the winner!")
         elif self.human.selected_starter == "Spock" and self.ai.selected_starter == "Scissors":
-            player_wins = player_wins + 1
+            self.player_wins = self.player_wins + 1
             print("Player is the winner!")
         elif self.ai.selected_starter == "Spock" and self.human.selected_starter == "Scissors":
-            AI_wins = AI_wins + 1
+            self.AI_wins = self.AI_wins + 1
             print("AI is the winner!")
         elif self.human.selected_starter == "Scissors" and self.ai.selected_starter == "Lizard":
-            player_wins = player_wins + 1
+            self.player_wins = self.player_wins + 1
             print("Player is the winner!")
         elif self.ai.selected_starter == "Scissors" and self.human.selected_starter == "Lizard":
-            AI_wins = AI_wins + 1
+            self.AI_wins = self.AI_wins + 1
             print("AI is the winner!")
         elif self.human.selected_starter == "Lizard" and self.ai.selected_starter == "Paper":
-            player_wins = player_wins + 1
+            self.player_wins = self.player_wins + 1
             print("Player is the winner!")
         elif self.ai.selected_starter == "Lizard" and self.human.selected_starter == "Paper":
-            AI_wins = AI_wins + 1
+            self.AI_wins = self.AI_wins + 1
             print("AI is the winner!")
         elif self.human.selected_starter == "Paper" and self.ai.selected_starter == "Spock":
-            player_wins = player_wins + 1
+            self.player_wins = self.player_wins + 1
             print("Player is the winner!")
         elif self.ai.selected_starter == "Paper" and self.human.selected_starter == "Spock":
-            AI_wins = AI_wins + 1
+            self.AI_wins = self.AI_wins + 1
             print("AI is the winner!")
         elif self.human.selected_starter == "Spock" and self.ai.selected_starter == "Rock":
-            player_wins = player_wins + 1
+            self.player_wins = self.player_wins + 1
             print("Player is the winner!")
         elif self.ai.selected_starter == "Spock" and self.human.selected_starter == "Rock":
-            AI_wins = AI_wins + 1
+            self.AI_wins = self.AI_wins + 1
             print("AI is the winner!")
         elif self.human.selected_starter == "Rock" and self.ai.selected_starter == "Scissors":
-            player_wins = player_wins + 1
+            self.player_wins = self.player_wins + 1
             print("Player is the winner!")
         elif self.ai.selected_starter == "Rock" and self.human.selected_starter == "Scissors":
-            AI_wins = AI_wins + 1
+            self.AI_wins = self.AI_wins + 1
             print("AI is the winner!")
         else:
             print("Tie game!")
 
-        def series_winner(self):
-            if self.arena.winner
+    def series_winner(self):
+        if self.player_wins >= 2:
+            print("Player wins best of three!!") 
+        elif self.AI_wins >= 2:
+            print("AI wins best of three!!")
+        else:
+            self.players_choose_starters()
+            self.winner_rpsls()
+            self.series_winner()
+            
+        
         
