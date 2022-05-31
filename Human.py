@@ -15,7 +15,7 @@ class Human(Trainer):
         
         user_input = int(input("Make your choice:  "))
         self.selected_starter = self.rpsls_list[user_input -1]
-
+        
         
         
         pass

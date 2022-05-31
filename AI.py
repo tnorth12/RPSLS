@@ -1,6 +1,7 @@
 #Child Class
 
 from Trainer import Trainer
+
 import random
 
 class AI(Trainer):
@@ -12,4 +13,5 @@ class AI(Trainer):
         print("AI made a choice!")
         self.selected_starter = random.choice(self.rpsls_list)
         print(f"{self.name} chose {self.selected_starter}")
+        
         pass
