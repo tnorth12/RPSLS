@@ -15,7 +15,7 @@ class Human(Trainer):
         
         user_input = int(input("Make your choice:  "))
         while not (user_input <= len(self.rpsls_list)):
-            user_input = int(input("\nYou must enter a number only 1-4\n"))
+            user_input = int(input("\nYou must enter a number only 1-5\n"))
         self.selected_starter = self.rpsls_list[user_input -1]
         
         
